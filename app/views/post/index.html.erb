@@ -2,21 +2,21 @@
 <h1>Welcome!</h1>
 <p>Crea un post aquí</p>
 
-<form>
- 
+<form method="get" action="/post/create">
+
     <div class="mb-3">
         <label for="titulo" class="form-label">titulo del post</label>
-        <input type="email" class="form-control" id="titulo">
+        <input class="form-control" id="titulo" name="titulo">
     </div>
 
     <div class="mb-3">
         <label for="imagen" class="form-label">url de imagen</label>
-        <input type="email" class="form-control" id="imagen">
+        <input class="form-control" id="imagen" name="imagen">
     </div>
 
     <div class="mb-3">
         <label for="contenido" class="form-label">Contenido</label>   
-         <textarea class="form-control" id="contenido"></textarea>
+         <textarea class="form-control" id="contenido" name="contenido"></textarea>
     </div>
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>
