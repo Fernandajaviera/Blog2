@@ -1,3 +1,12 @@
-<h1>Post#create</h1>
-<p>Find me in app/views/post/create.html.erb</p>
-<%= params %>
+<% if @post.errors.any? %>
+<div id="error_explanation">
+<h2>Se encontraron <%= pluralize(@post.errors.count, "errores") %></h2>
+<ul>
+<% @post.errors.full_messages.each do |msg| %>
+<li><%= msg %></li>
+<% end %>
+</ul>
+</div>
+<% else %>
+<h2> Tu post ha sido ingresado correctamente! </h2>
+<% end %>

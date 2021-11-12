@@ -1,8 +1,9 @@
 class PostController < ApplicationController
   def index
+    @posts = Post.all
   end
 
   def create
-    Post.create(titulo: params[:titulo], imagen: params[:imagen], contenido: params[:contenido])
+    @post=Post.create(title: params[:title], image_url: params[:image_url], content: params[:content])
   end
 end
